@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.cts.stockdata.model.CompanyDetails;
 import com.cts.stockdata.model.StockPrice;
@@ -24,6 +25,7 @@ import com.cts.stockdata.stockdatacontroller.StockDataController;
 @RestController
 @RequestMapping("/api/v1.0")
 @ControllerAdvice
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class StockInfoController  {
 	
 	private final static Logger logger=LoggerFactory.getLogger(StockInfoController.class);
